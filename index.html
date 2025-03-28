@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <link rel="stylesheet" href="portfolio.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Coffee Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script defer src="portfolio.js"></script>
+</head>
+<body class="bg-[#f3e5d8] text-[#3e2723]">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full bg-[#3e2723] text-white z-50 shadow-lg py-4 md:px-6 px-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <div class="text-2xl font-bold">Coffee Portfolio</div>
+    <ul class="hidden md:flex space-x-8 text-lg">
+      <li><a href="#home" class="nav-link hover:text-[#8b5e3c]">Home</a></li>
+      <li><a href="#about" class="nav-link hover:text-[#8b5e3c]">About</a></li>
+      <li><a href="#skills" class="nav-link hover:text-[#8b5e3c]">Skills</a></li>
+      <li><a href="#education" class="nav-link hover:text-[#8b5e3c]">Awards</a></li>
+    </ul>
+    <button class="md:hidden flex justify-center w-8 h-8 bg-[#3e2723] hover:bg-[#8b5e3c] rounded-full" id="menu-btn">
+      <i class="fas fa-bars text-white text-2xl"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="hidden fixed top-0 left-0 w-full h-screen bg-[#3e2723] z-50" id="mobile-menu">
+  <div class="flex justify-end p-4">
+    <button id="close-menu" class="text-white text-2xl">&times;</button>
+  </div>
+  <ul class="flex flex-col space-y-8 text-lg p-4">
+    <li><a href="#home" class="nav-link hover:text-[#8b5e3c]">Home</a></li>
+    <li><a href="#about" class="nav-link hover:text-[#8b5e3c]">About</a></li>
+    <li><a href="#skills" class="nav-link hover:text-[#8b5e3c]">Skills</a></li>
+    <li><a href="#education" class="nav-link hover:text-[#8b5e3c]">Awards</a></li>
+  </ul>
+</div>
+
+<!-- Hero Section -->
+<section id="home" class="min-h-screen flex items-center justify-center bg-[#f3e5d8] text-[#3e2723] md:px-6 px-4 fade-in">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <div class="w-full md:w-1/2 pr-6 md:mb-0 mb-8">
+      <img src="images/barista.png" alt="My Photo" class="rounded-lg shadow-xl w-full h-auto object-cover transition-transform duration-500 hover:scale-105" />
+    </div>
+    <div class="w-full md:w-1/2 pl-6 mt-8 md:mt-0">
+      <h1 class="text-5xl sm:text-6xl font-extrabold drop-shadow-lg">Hi, I'm Andrew</h1>
+      <div class="mt-4 inline-block bg-[#d9b99b] text-[#3e2723] p-6 rounded-lg transition-all duration-300 hover:bg-[#b88d6a]">
+        <p class="text-xl sm:text-2xl">I am a professional Barista and the man behind your perfect cup of coffee.</p>
+      </div>
+      <a href="#about" class="mt-6 inline-block py-3 px-6 bg-[#8b5e3c] text-white font-bold text-lg rounded-lg hover:bg-[#6a4229] transition-all shadow-lg">
+        Learn More
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- About Me Section -->
+<section id="about" class="min-h-screen py-16 bg-[#d9b99b] md:px-6 px-4 flex items-center fade-in">
+  <div class="max-w-6xl mx-auto text-center space-y-12">
+    <h2 class="text-4xl sm:text-5xl font-bold text-[#3e2723] mb-8">About Me</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-[#f3e5d8] p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+        <h3 class="text-xl sm:text-2xl font-semibold text-[#3e2723] mb-4">Metal Music</h3>
+        <p class="text-base sm:text-lg text-[#3e2723] leading-relaxed">I'm a big fan of metal music. The raw energy, the passion, and the heavy riffs keep me pumped up and motivated. It's my way of escaping and finding inspiration.</p>
+      </div>
+      <div class="bg-[#f3e5d8] p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+        <h3 class="text-xl sm:text-2xl font-semibold text-[#3e2723] mb-4">Volleyball</h3>
+        <p class="text-base sm:text-lg text-[#3e2723] leading-relaxed">Volleyball is one of my favorite ways to stay active. I love the teamwork, the competitive vibe, and the rush you get from a good game. It’s also a great way to meet new people and have fun.</p>
+      </div>
+      <div class="bg-[#f3e5d8] p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+        <h3 class="text-xl sm:text-2xl font-semibold text-[#3e2723] mb-4">Video Games</h3>
+        <p class="text-base sm:text-lg text-[#3e2723] leading-relaxed">When I'm not making coffee or playing volleyball, you’ll probably find me gaming. I enjoy the stories, the challenges, and just losing myself in new worlds. It’s my way of relaxing and trying new things.</p>
+      </div>
+    </div>
+    <div class="mt-16 space-y-6">
+      <h3 class="text-3xl sm:text-4xl font-semibold text-[#3e2723] mb-6">How I Got Into Making Coffee</h3>
+      <div class="bg-[#f3e5d8] p-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300">
+        <p class="text-base sm:text-lg text-[#3e2723] leading-relaxed">I started with instant coffee. It wasn’t fancy, but I loved the warmth and energy it gave me. Over time, I began visiting local cafes, and I really liked the vibe—the music, the atmosphere, and the people. I just knew I wanted to be part of that.</p>
+        <p class="mt-4 text-base sm:text-lg text-[#3e2723] leading-relaxed">Now, coffee means more to me than just a drink. It’s a way to connect with others and share a little happiness with a great cup of coffee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Personal Skills Section -->
+<section id="skills" class="min-h-screen py-16 bg-[#b88d6a] text-[#3e2723] md:px-6 px-4 flex items-center fade-in">
+  <div class="w-full max-w-7xl mx-auto text-center space-y-10">
+    <h2 class="text-4xl sm:text-5xl font-extrabold">Personal Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      <!-- Skill 1 -->
+      <div class="bg-[#d9b99b] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col items-center space-y-4">
+        <div class="text-4xl sm:text-5xl"><i class="fas fa-coffee"></i></div>
+        <h3 class="text-xl sm:text-2xl font-semibold">Espresso Mastery</h3>
+        <p class="text-base sm:text-lg text-[#4e342e]">Perfecting the art of espresso brewing, creating that rich, smooth, and balanced shot every time.</p>
+      </div>
+
+      <!-- Skill 2 -->
+      <div class="bg-[#d9b99b] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col items-center space-y-4">
+        <div class="text-4xl sm:text-5xl"><i class="fas fa-mug-hot"></i></div>
+        <h3 class="text-xl sm:text-2xl font-semibold">Latte Art</h3>
+        <p class="text-base sm:text-lg text-[#4e342e]">Crafting beautiful and delicious latte art that impresses and brings joy to the coffee experience.</p>
+      </div>
+
+      <!-- Skill 3 -->
+      <div class="bg-[#d9b99b] p-6 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col items-center space-y-4">
+        <div class="text-4xl sm:text-5xl"><i class="fas fa-user"></i></div>
+        <h3 class="text-xl sm:text-2xl font-semibold">Customer Relations</h3>
+        <p class="text-base sm:text-lg text-[#4e342e]">Building strong, lasting relationships with customers, ensuring every experience is top-notch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="min-h-screen py-16 bg-[#8b5e3c] text-white md:px-6 px-4 flex items-center fade-in">
+  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 mx-auto">
+    <!-- Left Image -->
+    <div class="flex justify-center items-center">
+      <img src="images/cofee_maker.jpg" alt="Barista" class="rounded-xl shadow-xl w-[90%] object-cover transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+    </div>
+
+    <!-- Right Content -->
+    <div class="space-y-8 flex flex-col justify-center">
+      <h2 class="text-5xl font-bold text-[#f5f5f5] text-center">Awards & Certifications</h2>
+
+      <div class="space-y-6 border-l-4 border-[#d9b99b] pl-6">
+        <!-- Award 1 -->
+        <div class="bg-[#a47148] rounded-lg p-4 shadow-md hover:scale-105 transition-all">
+          <h3 class="text-2xl font-semibold text-white">Certified Barista</h3>
+          <p class="text-lg text-[#f5f5f5]">Specialty Coffee Association - 2017</p>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="bg-[#a47148] rounded-lg p-4 shadow-md hover:scale-105 transition-all">
+          <h3 class="text-2xl font-semibold text-white">Advanced Coffee Roasting</h3>
+          <p class="text-lg text-[#f5f5f5]">Coffee Institute - 2018</p>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="bg-[#a47148] rounded-lg p-4 shadow-md hover:scale-105 transition-all">
+          <h3 class="text-2xl font-semibold text-white">Latte Art Champion</h3>
+          <p class="text-lg text-[#f5f5f5]">National Coffee Festival - 2020</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-[#744a34] text-white md:px-6 px-4 fade-in">
+  <div class="max-w-6xl mx-auto text-center space-y-8">
+    <h2 class="text-4xl sm:text-5xl font-extrabold">Let's Connect!</h2>
+    <p class="text-lg sm:text-xl">I would love to hear from you. Whether you're a fellow coffee enthusiast or just want to say hello, feel free to reach out. Let's make this world a little bit better, one coffee at a time!</p>
+
+    <div class="flex justify-center space-x-8 mt-8">
+      <!-- Social Links -->
+      <a href="https://www.instagram.com/ondrejratajsky/" class="text-3xl hover:text-[#d9b99b]">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/RatajskyOndrej" class="text-3xl hover:text-[#d9b99b]">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:ondrej.ratajsky@orbiszlin.cz" class="text-3xl hover:text-[#d9b99b]">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <p class="mt-8 text-lg sm:text-xl">Feel free to send me a message, and I’ll get back to you as soon as possible!</p>
+
+    <!-- Farewell Message -->
+    <p class="mt-8 text-lg sm:text-xl italic">Thank you for visiting my portfolio. Have a great day and stay caffeinated!</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-6 bg-[#3e2723] text-[#ffeadb] text-lg">
+  2025 My Coffee Portfolio
+</footer>
+
+<!-- Social Panel -->
+<div class="fixed right-4 top-1/2 transform -translate-y-1/2 bg-[#3e2723] text-white rounded-lg shadow-lg p-4 flex flex-col space-y-4">
+  <a href="https://www.instagram.com/ondrejratajsky/" target="_blank" class="text-3xl hover:text-[#8b5e3c] transition-all duration-300">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://github.com/RatajskyOndrej" target="_blank" class="text-3xl hover:text-[#8b5e3c] transition-all duration-300">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+</body>
+</html>
